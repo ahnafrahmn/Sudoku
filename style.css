@@ -1,0 +1,215 @@
+
+/*   
+    Ahnaf's Code    
+    IG : @ahnaf.rahmn   
+    Mail : ahnaf.rahmn@gmail.com
+     
+*/
+
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    background-color: gray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-size: 150%;
+    user-select: none;
+}
+
+.box{
+    background-color: gray;
+    border-radius: 10px;
+    width: 450px;
+    aspect-ratio: 1/1;
+    /* width: 80vw; */
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 0px;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+.small-box{
+    background-color: rgb(214, 196, 196);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 47px;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+}
+.small-box:hover{
+    background-color: rgb(55, 211, 41);
+}
+.vertical-line{
+    border-right: 3px solid black;
+}
+.horizontal-line{
+    border-bottom: 3px solid black;
+}
+
+
+
+
+.nums{
+    background-color:transparent;
+    border-radius: 20px;
+    width: 450px;
+    height: 50px;
+    /* width: 80vw; */
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 0px;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+}
+.optNums{
+    background-color: rgb(214, 196, 196);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+.optNums:hover{
+    background-color: rgb(55, 211, 41);
+}
+
+.gap{
+    background-color: rgb(234, 230, 230)
+}
+
+.clicked{
+    background-color: rgb(201, 201, 153);
+}
+
+.selectedNum{
+    background-color: rgb(255, 217, 0);
+}
+
+.selected{
+    border: 3px darkmagenta solid;
+    border-radius: 7px;
+    background-color: rgb(255, 217, 0);
+}
+
+
+
+.msg1{
+    background-color: transparent;
+    color: transparent;
+    width: 0;
+    height: 0;
+}
+.msg{
+    text-align: center;
+    background-color: rgba(96, 231, 0, 0.718);
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 150%;
+    top: 50%;
+    width: 30vw;
+    height: 100%;
+    padding: 20px;
+    z-index: 999;
+    animation-duration: 1s;
+    animation-name: winM;
+    animation-timing-function: all ease;
+}
+@keyframes winM{
+    0%{
+        width: 0;
+        font-size: 0;
+    }
+    100%{
+        width: 30vw;
+    }
+}
+
+
+.chanceMsg{
+    display: block;
+    margin-bottom: 1px;
+    border-radius: 20px;
+    width: 450px;
+    height: 50px;
+    font-size: larger;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1px;
+    top: 0;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    body{
+        width: 100vw;
+        margin: 0.5%;
+        font-size: 130%;
+        font-weight: bold;
+    }
+    .content{
+        width: 89vw;
+        padding: 0;
+        transform: translateX(7%);
+    }
+    .small-box,
+    .optNums{
+        width: 9vw;
+    }
+    .chanceMsg{
+        width: 100vw;
+    }
+    .msg{
+        margin: 0 20% 0 20%;
+        font-size: 90%;
+        width: 50%;
+    }
+    @keyframes winM{
+        0%{
+            margin: 0 50% 0 50%;
+            width: 0;
+            font-size: 0;
+        }
+        100%{
+            width: 50%;
+            margin: 0 20% 0 20%;
+            font-size: 90%;
+        }
+    }
+}
+
+
+
+
+
+.vanish,
+.chance{
+    display: none;
+}
